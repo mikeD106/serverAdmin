@@ -20,7 +20,7 @@ else{
 	echo "0 results";
 }
 
-mysql_num_rows($result);
+mysqli_num_rows($result);
 
 mysqli_close($link);
 
