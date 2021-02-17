@@ -7,9 +7,9 @@ if(!link){
 }
 
 echo "connection success!";
-$sql = "SELECT COUNT() FROM users";
+$sql = "SELECT * FROM users";
 
-$result = $link->query($sql);
+$result = mysql_num_rows($sql);
 
 echo $result;
 
