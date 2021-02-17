@@ -11,7 +11,7 @@ $sql = "SELECT COUNT(ID) FROM users";
 
 $result = $link->query($sql);
 
-if ($result> 0){
+if ($result->num_rows > 0){
   echo $result;
 }
 else{
