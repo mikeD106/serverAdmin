@@ -7,12 +7,21 @@ if(!link){
 }
 
 echo "connection success!";
-
 $sql = "SELECT * FROM users";
 
-$result = mysql_query($sql, $link);
-$number = mysql_num_rows($result);
-echo $number;
+$result = $link->query($sql);
+
+if ($result->num_rows > 0){
+        while ($row = $result->fetch_assoc()){
+	echo "ID : " . $row["ID"] . " | Nama :" . $row["Nama"] . " | Kantor:" . $row["Kantor"] . "|";
+        }
+}
+else{
+	echo "0 results";
+}
+
+mysql_num_rows($result);
 
 mysqli_close($link);
+
 ?>
