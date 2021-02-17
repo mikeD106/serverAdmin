@@ -9,8 +9,7 @@ if(!link){
 echo "connection success!";
 $sql = "SELECT * FROM users";
 
-$result = mysql_num_rows($sql);
-
+$result = $link->mysql_num_rows($sql);
 echo $result;
 
 mysqli_close($link);
