@@ -7,15 +7,11 @@ if(!link){
 }
 
 echo "connection success!";
-$sql = "SELECT COUNT(ID) FROM users";
+$sql = "SELECT COUNT() FROM users";
 
 $result = $link->query($sql);
 
-if ($result->num_rows > 0){
-  echo $result;
-}
-else{
-	echo "0 results";
-}
+echo $result;
+
 mysqli_close($link);
 ?>
