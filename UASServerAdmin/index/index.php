@@ -1,11 +1,6 @@
 <?php
 $link = mysqli_connect("172.18.0.3", "opacite", "root", "Trucorp");
 
-if(!link){
-	echo "cannot connect to MySQL" . PHP_EOL;
-	exit;
-}
-
 echo "connection success!";
 $sql = "SELECT * FROM users";
 
@@ -20,7 +15,9 @@ else{
 	echo "0 results";
 }
 
-mysqli_num_rows($result);
+$number = mysqli_num_rows($result);
+
+echo $number;
 
 mysqli_close($link);
 
