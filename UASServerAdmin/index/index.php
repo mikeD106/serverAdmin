@@ -7,10 +7,12 @@ if(!link){
 }
 
 echo "connection success!";
+
 $sql = "SELECT * FROM users";
 
-$result = $link->mysql_num_rows($sql);
-echo $result;
+$result = mysql_query($sql, $link);
+$number = mysql_num_rows($result);
+echo $number;
 
 mysqli_close($link);
 ?>
